@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xlmns:th="http://www.thymeleaf.org" xmlns:xlmns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Navlist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body style="background-color: #ccc">
+
+<div style="display: flex; justify-content: center; align-items: center">
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/level}">Уровень языка</a>
+</nav>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{ /exercises}">Упражнения</a>
+</nav>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{ /dictionary }">Словарь</a>
+</nav>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{ /profile }">Мой профиль</a>
+</nav>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{ /logout }">Выход</a>
+</nav>
+</div>
+</body>
+</html>

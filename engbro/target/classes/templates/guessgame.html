@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xlmns:th="http://www.thymeleaf.org" xmlns:xlmns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:each="guess: ${list}">
+<div>
+    <p th:text="${guess.getGuessword()}"/>
+    <input th:class="a+${guess.getId()}" type="text">
+    <input th:id="a+${guess.getId()}" type="hidden" th:value="${guess.getWord()}">
+</div>
+</div>
+<input type="submit"  onclick="checkGuess()">
+
+<script>
+    const inputString = "[[${list}]]";
+    const digitArray = inputString.match(/\d/g);
+
+    const outputArray = digitArray.map(digit => parseInt(digit, 10));
+    let correct = 0;
+    function checkGuess() {
+        for (let i = 0; i < outputArray.length; i++) {
+            let a = document.querySelector('.a'+outputArray[i])
+            let b = document.querySelector('#a'+outputArray[i])
+            if (a.value == b.value) {
+                correct++;
+            }
+        }
+        alert(correct)
+    }
+</script>
+</body>
+</html>

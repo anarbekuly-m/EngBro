@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xlmns:th="http://www.thymeleaf.org" xmlns:xlmns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>guess</title>
+</head>
+<body>
+
+<p>Вы выбрали 'Угадай слово'</p>
+<p>Выберите сложность:</p>
+<p>
+    <a th:href="@{ /guess/standard }">1) Стандартная</a>
+</p>
+<p>
+
+    <a th:href="@{ /guess/hard }"> 2) Невозможная</a>
+
+   </p>
+</body>
+</html>
